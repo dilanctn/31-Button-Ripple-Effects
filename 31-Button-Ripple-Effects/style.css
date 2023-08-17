@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    display: flex;
+    background-color: rgb(255, 239, 239);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+button {
+    background-color: rgb(136, 59, 214);
+    box-shadow: 0 8px 8px 0 rgba(83, 8, 117, 0.5);
+    font-family: inherit;
+    border: none;
+    border-radius: 1rem;
+    padding: 2rem 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffff;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.circle {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: #ffff;
+    left: 6rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    -moz-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    -o-transform: translate(-50%, -50%) scale(0);
+    -webkit-animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(3);
+        -moz-transform: translate(-50%, -50%) scale(3);
+        -ms-transform: translate(-50%, -50%) scale(3);
+        -o-transform: translate(-50%, -50%) scale(3);
+    }
+}
